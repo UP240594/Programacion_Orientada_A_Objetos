@@ -15,42 +15,46 @@ String matricula;
     }
 }
 
-class Aula{
-    int numero;
-    Asiento[] asientos;
-    int lugares;
-        Aula(int numero){
-            this.numero = numero;
-        }
-
-        void asientosDispoibles(int disponible){
-            this.asientos = new Asiento[disponible];
-        }
-
-
-    int entrar(Alumno persona){
-
-            return 1;
-    }
-
-    int salir (Alumno persona){
-            return 0;
-    }
-
-    void mostrarOcupados(){
-
-    }
-
-}
-
 class Asiento{
     boolean diestro;
     Alumno ocupante;
     boolean ocupado;
-     Asiento( boolean ocupado , Alumno ocupante , boolean diestro){
-         this.diestro = diestro;
-         this.ocupado = ocupado;
-         this.ocupante = ocupante;
-     }
+        Asiento( boolean diestros){
+            this.diestro = diestros;
+            this.ocupado = false;
+        }
 
 }
+
+
+class Aula{
+    String id;
+    Asiento[] asientos;
+
+        Aula(int numAsientos){
+            this.asientos = new Asiento[numAsientos];
+        }
+
+            int entrar(Alumno persona){
+                int numAlumnos = 0;
+                    for(Asiento asiento : this.asientos){
+                        if(asiento.ocupante == persona){
+                            asiento.ocupado = true;
+                        }
+                        if(asiento.ocupado){  //Esto significa si esto es igual a true, no es necesario poner el  ==true
+                            numAlumnos++;
+                        }
+                }
+                    return numAlumnos;
+            }
+
+        int salir (Alumno persona){
+                return 0;
+        }
+
+        void mostrarOcupados(){
+
+        }
+
+}
+
