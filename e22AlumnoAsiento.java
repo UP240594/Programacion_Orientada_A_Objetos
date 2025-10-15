@@ -15,9 +15,18 @@ class e22AlumnoAsiento{
         numerosParesMejorados.add(2); //Aqui estamos agregando el numero 3 al array
         numerosParesMejorados.add(4);  //Pueden hacer crecer su conjunto.
         numerosParesMejorados.add(6);
-        numerosParesMejorados.add(6);
-        numerosParesMejorados.add(6);
-        numerosParesMejorados.add(6);
+        numerosParesMejorados.add(8);
+        numerosParesMejorados.add(10);
+        numerosParesMejorados.add(12);
+
+        numerosParesMejorados.get(5);  //obtiene el valor en el numero 5 de la lista y lo muestra, contando del 0 al 5
+
+        numerosParesMejorados.remove(5); //Borra el valor en el numero 5 de la lista
+
+        for(int elemento : numerosParesMejorados){
+            System.out.println(elemento);
+        }
+        System.out.println("Tamaño: " + numerosParesMejorados.size());
     }
 }
 
