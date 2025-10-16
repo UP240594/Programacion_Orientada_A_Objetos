@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class e22AlumnoAsiento{
+class e22NuevosArrays {
     public static void main(String[] args){
         int[] numerosPares = new int[4];
         numerosPares[0] = 2;
