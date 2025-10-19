@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+//Modificar este coigo para que salga mejor
 class e22NuevosArrays {
     public static void main(String[] args){
         int[] numerosPares = new int[4];
