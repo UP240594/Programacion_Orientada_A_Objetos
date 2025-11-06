@@ -31,7 +31,7 @@ class Space{
         }
 }
 
-class Room extends Space{
+class Room extends Space{  //aqui aclaramos que Room es hijo de Space, es decir se traduce como Room ES UN espacio
     int door;
     int window;
 
